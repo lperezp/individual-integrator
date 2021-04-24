@@ -8,7 +8,7 @@ const routes: Routes = [
     path: 'user',
     component: UserLayoutComponent,
     loadChildren: () =>
-      import('./core/modules/periodic-table/periodic-table.module').then(
+      import('./modules/periodic-table/periodic-table.module').then(
         (m) => m.PeriodicTableModule
       ),
   },

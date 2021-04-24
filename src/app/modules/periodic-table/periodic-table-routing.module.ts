@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 
-import { PeriodicTableComponent } from './periodic-table.component';
+import { PeriodicTableComponent } from './pages/periodic-table.component';
 
 const routes: Routes = [{ path: '', component: PeriodicTableComponent }];
 

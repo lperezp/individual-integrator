@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+
+
+  &__input {
+    width: 200px;
+  }
+
+  &__button {
+    margin: 0px 10px;
+  }
+}

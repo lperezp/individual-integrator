@@ -4,10 +4,9 @@ import { RouterModule } from '@angular/router';
 
 import { UserLayoutComponent } from './layout/user-layout/user-layout.component';
 import { UserHeaderComponent } from './components/user/user-header/user-header.component';
-import { InputSearchComponent } from './modules/components/inputs/input-search/input-search.component';
 
 @NgModule({
-  declarations: [UserLayoutComponent, UserHeaderComponent, InputSearchComponent],
+  declarations: [UserLayoutComponent, UserHeaderComponent],
   imports: [CommonModule, RouterModule],
 })
 export class CoreModule {}
