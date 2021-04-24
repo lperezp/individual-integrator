@@ -7,8 +7,10 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserLayoutComponent,
-    // loadChildren: () =>
-    //   import('./modules/client/client.module').then((m) => m.ClientModule),
+    loadChildren: () =>
+      import('./core/modules/periodic-table/periodic-table.module').then(
+        (m) => m.PeriodicTableModule
+      ),
   },
   {
     path: '',
