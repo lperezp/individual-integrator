@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AntDesignModule } from './ant-design/ant-design.module';
 
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    AntDesignModule
+    CommonModule
   ]
 })
-export class SharedModule { }
+export class AntDesignModule { }
