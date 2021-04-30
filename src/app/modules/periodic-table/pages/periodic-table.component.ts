@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { CHEMICAL_ELEMENT_MOCK } from 'src/app/mocks/chemicalElement.mock';
+
+import { ChemicalElementInterface } from './../../../models/chemical-element.model';
 
 @Component({
   selector: 'app-periodic-table',
@@ -7,8 +10,10 @@ import { CHEMICAL_ELEMENT_MOCK } from 'src/app/mocks/chemicalElement.mock';
   styleUrls: ['./periodic-table.component.scss'],
 })
 export class PeriodicTableComponent implements OnInit {
-  listElement = CHEMICAL_ELEMENT_MOCK;
+  listElement: ChemicalElementInterface[] = CHEMICAL_ELEMENT_MOCK;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.listElement);
+  }
 }
