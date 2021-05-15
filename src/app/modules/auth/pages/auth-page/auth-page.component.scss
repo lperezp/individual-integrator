@@ -1,0 +1,47 @@
+@import 'variables.scss';
+
+.container__page {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0px 0px 40px 15px rgb(17, 16, 16);
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+      width: 50%;
+    }
+
+    &__form {
+      .form {
+        &__label {
+          font-weight: 700;
+          padding: 25px 0px 10px 0px;
+          display: inline-block;
+        }
+
+        &__error {
+          color: $error-color;
+          border: 1px solid $error-color;
+        }
+
+        &__control {
+          display: flex;
+          justify-content: center;
+          margin-top: 25px;
+        }
+      }
+
+      .text__error {
+        color: $error-color;
+      }
+    }
+  }
+
+}

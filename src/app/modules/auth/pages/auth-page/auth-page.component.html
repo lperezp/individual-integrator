@@ -1,0 +1,55 @@
+<div class="container__page">
+  <div class="container">
+    <img
+      class="container__logo"
+      alt="logo-inti-raymi"
+      src="https://png.pngtree.com/templates/20180926/chemistry-logo-template-png_32420.jpg"
+    />
+    <form (ngSubmit)="login()" [formGroup]="formLogin" class="container__form">
+      <label class="form__label">Usuario</label>
+      <input
+        aria-label="usuario"
+        [ngClass]="{ form__error: isError }"
+        formControlName="email"
+        nz-input
+        placeholder="Ingrese su usuario"
+      />
+      <label class="form__label">Contraseña</label>
+      <nz-input-group
+        [ngClass]="{ form__error: isError }"
+        [nzSuffix]="suffixIconVisible"
+      >
+        <input
+          [type]="isVisiblePwd ? 'type' : 'password'"
+          aria-label="password"
+          formControlName="password"
+          nz-input
+          nz-input
+          placeholder="Ingrese su contraseña"
+        />
+      </nz-input-group>
+      <ng-template #suffixIconVisible>
+        <i
+          (click)="isVisiblePwd = !isVisiblePwd"
+          [nzType]="isVisiblePwd ? 'eye-invisible' : 'eye'"
+          nz-icon
+        ></i>
+      </ng-template>
+      <small
+        [ngStyle]="{ visibility: isError ? 'visible' : 'hidden' }"
+        class="text__error"
+        >*El usuario y/o la contraseña son incorrectos.</small
+      >
+      <div class="form__control">
+        <button
+          [disabled]="!formLogin.valid"
+          (click)="login()"
+          nz-button
+          nzType="primary"
+        >
+          INGRESAR
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

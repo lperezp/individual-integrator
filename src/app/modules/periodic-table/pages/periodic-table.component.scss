@@ -1,0 +1,127 @@
+.container {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__search {
+    width: 1152px;
+    padding: 20px 0px;
+  }
+
+  &__table {
+    width: 1152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    user-select: none;
+
+    .table__row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &--group {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .table__element {
+        height: 60px;
+        width: 60px;
+        margin: 2px;
+        background-color: #91ee9c;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+
+        .element__header {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          &--mass,
+          &--atomic {
+            font-size: 10px;
+          }
+        }
+
+        .element__code {
+          font-weight: bold;
+        }
+
+        .element__footer {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          &--name {
+            width: 100%;
+            text-align: center;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    &--footer {
+      margin-top: 40px;
+
+      .table__row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &--group {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .table__element {
+          height: 60px;
+          width: 60px;
+          margin: 2px;
+          background-color: burlywood;
+          padding: 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+
+          .element__header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            &--mass,
+            &--atomic {
+              font-size: 10px;
+            }
+          }
+
+          .element__code {
+            font-weight: bold;
+          }
+
+          .element__footer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            &--name {
+              width: 100%;
+              text-align: center;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
