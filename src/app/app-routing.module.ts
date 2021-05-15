@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminLayoutComponent } from './core/layout/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './core/layout/auth-layout/auth-layout.component';
 
 import { UserLayoutComponent } from './core/layout/user-layout/user-layout.component';
@@ -18,6 +19,14 @@ const routes: Routes = [
     component: AuthLayoutComponent,
     loadChildren: () =>
       import('src/app/modules/auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'analysis',
+    component: AdminLayoutComponent,
+    loadChildren: () =>
+      import('src/app/modules/analysis/analysis.module').then(
+        (m) => m.AnalysisModule
+      ),
   },
   {
     path: '',

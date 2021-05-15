@@ -5,4 +5,11 @@ export class AppSettings {
       routerlink: '/user',
     },
   ];
+
+  public static MENU_ADMIN = [
+    {
+      label: 'Reportes',
+      routerlink: '/analysis',
+    },
+  ];
 }
