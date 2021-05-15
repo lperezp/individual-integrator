@@ -7,9 +7,10 @@ import { PeriodicTableRoutingModule } from './periodic-table-routing.module';
 
 import { PeriodicTableComponent } from './pages/periodic-table.component';
 import { InputSearchComponent } from './components/inputs/input-search/input-search.component';
+import { ModalElementInformationComponent } from './components/modals/modal-element-information/modal-element-information.component';
 
 @NgModule({
-  declarations: [PeriodicTableComponent, InputSearchComponent],
+  declarations: [PeriodicTableComponent, InputSearchComponent, ModalElementInformationComponent],
   imports: [CommonModule, PeriodicTableRoutingModule, SharedModule],
 })
 export class PeriodicTableModule {}

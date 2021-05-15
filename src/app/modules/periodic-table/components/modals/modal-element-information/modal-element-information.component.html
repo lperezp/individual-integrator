@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="container__header">
+    <div class="header__element">
+      <div
+        class="element"
+        [ngStyle]="{ 'background-color': '#' + elementChemical.cpkHexColor }"
+      >
+        <div class="element__top">
+          <p class="element__top--atomic">{{ index }}</p>
+          <p class="element__top--mass">
+            {{ elementChemical.atomicMass | number: "1.0-2" }}
+          </p>
+        </div>
+        <h1 class="symbol">{{ elementChemical.symbol }}</h1>
+        <h2 class="name">{{ elementChemical.name }}</h2>
+      </div>
+    </div>
+    <div class="header__history">
+      <h3>Historia</h3>
+      <p [innerHtml]="elementChemical.history"></p>
+    </div>
+  </div>
+  <div class="container__detail">
+    <div class="detail__column">
+      <p>
+        Peso atómico: <span>{{ elementChemical.atomicMass }}</span>
+      </p>
+      <p>
+        Radio atómico: <span>{{ elementChemical.atomicRadius }}</span>
+      </p>
+      <p>
+        Fase a temperatura y presión estándar:
+        <span>{{ elementChemical.standardState }}</span>
+      </p>
+      <p>
+        Configuración electrónica:
+        <span>{{ elementChemical.electronicConfiguration }}</span>
+      </p>
+    </div>
+    <div class="detail__column">
+      <p>
+        Estados de oxidación comunes:
+        <span>{{ elementChemical.oxidationStates }}</span>
+      </p>
+      <p>
+        Densidad:
+        <span>{{ elementChemical.electronicConfiguration }}</span>
+      </p>
+      <p>
+        Isótopos:
+        <span [innerHtml]="elementChemical.isotopes"></span>
+      </p>
+    </div>
+  </div>
+  <!-- <div class="container__control">
+    <button nz-button nzType="primary">Aceptar</button>
+  </div> -->
+</div>
