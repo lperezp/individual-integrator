@@ -5,7 +5,12 @@
   <div class="container__table">
     <div class="table__row">
       <ng-container *ngFor="let item of listElement; index as i">
-        <div class="table__element" *ngIf="i <= 1">
+        <div
+          class="table__element"
+          [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+          *ngIf="i <= 1"
+          (click)="openDetail(item, i + 1)"
+        >
           <div class="element__header">
             <div class="element__header--atomic">{{ i + 1 }}</div>
             <div class="element__header--mass">
@@ -24,7 +29,12 @@
     <div class="table__row">
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 3 && i <= 4">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 3 && i <= 4"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">
@@ -42,45 +52,12 @@
       </div>
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 5 && i <= 10">
-            <div class="element__header">
-              <div class="element__header--atomic">{{ i + 1 }}</div>
-              <div class="element__header--mass">
-                {{ item.atomicMass | number: "1.0-2" }}
-              </div>
-            </div>
-            <div class="element__code">
-              {{ item.symbol }}
-            </div>
-            <div class="element__footer">
-              <div class="element__footer--name">{{ item.name }}</div>
-            </div>
-          </div>
-        </ng-container>
-      </div>
-    </div>
-    <div class="table__row">
-      <div class="table__row--group">
-        <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 11 && i <= 12">
-            <div class="element__header">
-              <div class="element__header--atomic">{{ i + 1 }}</div>
-              <div class="element__header--mass">
-                {{ item.atomicMass | number: "1.0-2" }}
-              </div>
-            </div>
-            <div class="element__code">
-              {{ item.symbol }}
-            </div>
-            <div class="element__footer">
-              <div class="element__footer--name">{{ item.name }}</div>
-            </div>
-          </div>
-        </ng-container>
-      </div>
-      <div class="table__row--group">
-        <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 13 && i <= 18">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 5 && i <= 10"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">
@@ -100,7 +77,35 @@
     <div class="table__row">
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 19 && i <= 36">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 11 && i <= 12"
+            (click)="openDetail(item, i + 1)"
+          >
+            <div class="element__header">
+              <div class="element__header--atomic">{{ i + 1 }}</div>
+              <div class="element__header--mass">
+                {{ item.atomicMass | number: "1.0-2" }}
+              </div>
+            </div>
+            <div class="element__code">
+              {{ item.symbol }}
+            </div>
+            <div class="element__footer">
+              <div class="element__footer--name">{{ item.name }}</div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="table__row--group">
+        <ng-container *ngFor="let item of listElement; index as i">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 13 && i <= 18"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">
@@ -120,7 +125,12 @@
     <div class="table__row">
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 37 && i <= 54">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 19 && i <= 36"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">
@@ -140,25 +150,12 @@
     <div class="table__row">
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 55 && i <= 56">
-            <div class="element__header">
-              <div class="element__header--atomic">{{ i + 1 }}</div>
-              <div class="element__header--mass">
-                {{ item.atomicMass | number: "1.0-2" }}
-              </div>
-            </div>
-            <div class="element__code">
-              {{ item.symbol }}
-            </div>
-            <div class="element__footer">
-              <div class="element__footer--name">{{ item.name }}</div>
-            </div>
-          </div>
-        </ng-container>
-      </div>
-      <div class="table__row--group">
-        <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 71 && i <= 86">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 37 && i <= 54"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">
@@ -178,7 +175,12 @@
     <div class="table__row">
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 87 && i <= 88">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 55 && i <= 56"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">
@@ -196,7 +198,60 @@
       </div>
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 103 && i <= 118">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 71 && i <= 86"
+            (click)="openDetail(item, i + 1)"
+          >
+            <div class="element__header">
+              <div class="element__header--atomic">{{ i + 1 }}</div>
+              <div class="element__header--mass">
+                {{ item.atomicMass | number: "1.0-2" }}
+              </div>
+            </div>
+            <div class="element__code">
+              {{ item.symbol }}
+            </div>
+            <div class="element__footer">
+              <div class="element__footer--name">{{ item.name }}</div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="table__row">
+      <div class="table__row--group">
+        <ng-container *ngFor="let item of listElement; index as i">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 87 && i <= 88"
+            (click)="openDetail(item, i + 1)"
+          >
+            <div class="element__header">
+              <div class="element__header--atomic">{{ i + 1 }}</div>
+              <div class="element__header--mass">
+                {{ item.atomicMass | number: "1.0-2" }}
+              </div>
+            </div>
+            <div class="element__code">
+              {{ item.symbol }}
+            </div>
+            <div class="element__footer">
+              <div class="element__footer--name">{{ item.name }}</div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="table__row--group">
+        <ng-container *ngFor="let item of listElement; index as i">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 103 && i <= 118"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">
@@ -219,7 +274,12 @@
     <div class="table__row">
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 57 && i <= 70">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 57 && i <= 70"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">
@@ -239,7 +299,12 @@
     <div class="table__row">
       <div class="table__row--group">
         <ng-container *ngFor="let item of listElement; index as i">
-          <div class="table__element" *ngIf="i >= 89 && i <= 102">
+          <div
+            class="table__element"
+            [ngStyle]="{ 'background-color': '#' + item.cpkHexColor }"
+            *ngIf="i >= 89 && i <= 102"
+            (click)="openDetail(item, i + 1)"
+          >
             <div class="element__header">
               <div class="element__header--atomic">{{ i + 1 }}</div>
               <div class="element__header--mass">

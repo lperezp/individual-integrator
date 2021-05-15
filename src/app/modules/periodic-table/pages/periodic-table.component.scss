@@ -31,12 +31,13 @@
         height: 60px;
         width: 60px;
         margin: 2px;
-        background-color: burlywood;
+        background-color: #91ee9c;
         padding: 5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
+        cursor: pointer;
 
         .element__header {
           display: flex;
