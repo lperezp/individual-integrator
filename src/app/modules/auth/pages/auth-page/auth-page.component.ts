@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -28,6 +29,6 @@ export class AuthPageComponent implements OnInit {
   }
 
   async login(): Promise<void> {
-    this.router.navigate(['/user']);
+    this.router.navigate(['/analysis']);
   }
 }

@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 import { NzModalService } from 'ng-zorro-antd/modal';
 
+import { CHEMICAL_ELEMENT_MOCK } from 'src/app/mocks/chemicalElement.mock';
+
 import { ElementService } from './../../../element.service';
 import { ChemicalElementInterface } from './../../../models/chemical-element.model';
 import { ModalElementInformationComponent } from '../components/modals/modal-element-information/modal-element-information.component';
-import { CHEMICAL_ELEMENT_MOCK } from 'src/app/mocks/chemicalElement.mock';
+import { LoggerService } from '../../../shared/service/logger.service';
 
 @Component({
   selector: 'app-periodic-table',
@@ -16,11 +18,17 @@ export class PeriodicTableComponent implements OnInit {
   listElement: ChemicalElementInterface[] = [];
   constructor(
     private elementService: ElementService,
+    private loggerService: LoggerService,
     private modalService: NzModalService
   ) {}
 
   ngOnInit(): void {
     this.getAllChemicalElement();
+    this.saveLogger();
+  }
+
+  async saveLogger(): Promise<void> {
+    await this.loggerService.saveLogger().toPromise();
   }
 
   async getAllChemicalElement(): Promise<void> {

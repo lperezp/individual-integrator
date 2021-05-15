@@ -41,7 +41,12 @@
         >*El usuario y/o la contraseña son incorrectos.</small
       >
       <div class="form__control">
-        <button [disabled]="!formLogin.valid" nz-button nzType="primary">
+        <button
+          [disabled]="!formLogin.valid"
+          (click)="login()"
+          nz-button
+          nzType="primary"
+        >
           INGRESAR
         </button>
       </div>
