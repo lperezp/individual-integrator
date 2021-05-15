@@ -1,4 +1,4 @@
-export const GROUP_BLOCK_MOCK = [
+export const SERIE_QUIMICA_MOCK = [
   {
     id: 1,
     name: 'Metal de transición',

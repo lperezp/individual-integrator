@@ -30,14 +30,36 @@
       </p>
       <p>
         Fase a temperatura y presión estándar:
-        <span>{{ elementChemical.standardState }}</span>
+        <span>{{ elementChemical.standardState.name }}</span>
       </p>
       <p>
         Configuración electrónica:
         <span>{{ elementChemical.electronicConfiguration }}</span>
       </p>
+      <p>
+        Bloque:
+        <span>{{ elementChemical.block.value }}</span>
+        <span
+          class="icon__info"
+          nz-tooltip
+          [nzTooltipTitle]="elementChemical.block.description"
+          ><i nz-icon nzType="info-circle" nzTheme="outline"></i
+        ></span>
+      </p>
+      <p>
+        Estructura cristalina:
+        <span>{{ elementChemical.crystalStructure.name }}</span>
+      </p>
+      <p>
+        Tipo de unión:
+        <span>{{ elementChemical.bondingType.name }}</span>
+      </p>
     </div>
     <div class="detail__column">
+      <p>
+        Número atómico:
+        <span>{{ elementChemical.order + 1 }}</span>
+      </p>
       <p>
         Estados de oxidación comunes:
         <span>{{ elementChemical.oxidationStates }}</span>
@@ -47,12 +69,17 @@
         <span>{{ elementChemical.electronicConfiguration }}</span>
       </p>
       <p>
+        Serie:
+        <span>{{ elementChemical.serieChemical.name }}</span>
+      </p>
+      <p>
+        Estado estándar:
+        <span>{{ elementChemical.standardState.name }}</span>
+      </p>
+      <p>
         Isótopos:
         <span [innerHtml]="elementChemical.isotopes"></span>
       </p>
     </div>
   </div>
-  <!-- <div class="container__control">
-    <button nz-button nzType="primary">Aceptar</button>
-  </div> -->
 </div>

@@ -1,19 +1,21 @@
 export interface ChemicalElementInterface {
+  id: number;
   atomicMass: number;
   atomicNumber: number;
   atomicRadius: number;
-  block: string;
+  block: Block;
+  bondingType: BondingType;
+  crystalStructure: CrystalStructure;
+  serieChemical: SerieChemical;
+  standardState: StandardState;
   boilingPoint: number;
-  bondingType: string;
   cpkHexColor: string;
-  crystalStructure: string;
   density: number;
   electronAffinity: number;
   electronegativity: number;
   electronicConfiguration: string;
   facts: string;
   group: number;
-  groupBlock: string;
   ionRadius: string;
   ionizationEnergy: number;
   isotopes: string;
@@ -24,10 +26,32 @@ export interface ChemicalElementInterface {
   oxidationStates: string;
   period: number;
   speedOfSound: number;
-  standardState: string;
   symbol: string;
   vanDelWaalsRadius: number;
   yearDiscovered: number;
   minerals: string;
   history: string;
+  order: number;
+}
+
+export interface Block {
+  id: number;
+  value: string;
+  description: string;
+}
+export interface BondingType {
+  id: number;
+  name: string;
+}
+export interface CrystalStructure {
+  id: number;
+  name: string;
+}
+export interface SerieChemical {
+  id: number;
+  name: string;
+}
+export interface StandardState {
+  id: number;
+  name: string;
 }

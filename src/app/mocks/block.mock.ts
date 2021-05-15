@@ -1,4 +1,4 @@
-export const BONDING_TYPE_MOCK = [
+export const BLOCK_MOCK = [
   {
     id: 1,
     value: 'S',
