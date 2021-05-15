@@ -1,1 +1,21 @@
-<p>analysis-page works!</p>
+<div class="container">
+  <h1>Análisis de Clientes</h1>
+  <div class="container__card">
+    <app-card-average
+      title="Total de Usuarios en la Plataforma"
+      [data]="listData.length"
+    ></app-card-average>
+    <app-card-average
+      title="Total de Usuarios en la Plataforma en esta hora"
+      [data]="listDataHour.length"
+    ></app-card-average>
+  </div>
+  <div class="container__graphic">
+    <div class="graphic">
+      <app-register-by-hour
+        title="Cantidad de Usuarios por Hora del día"
+        [data]="listData"
+      ></app-register-by-hour>
+    </div>
+  </div>
+</div>
